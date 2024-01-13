@@ -28,7 +28,7 @@ def text():
 
 if __name__=="__main__":
 			ip=os.environ.get("ip","0.0.0.0")
-			port=os.environ.get("port",8080)
+			port=os.environ.get("port",5000)
 			app.run(debug=True,host=ip,port=port)
 
 
