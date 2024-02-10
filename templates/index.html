@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.91">
+    <title>حجوزات باقات اورانج</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+            
+        /* إعدادات الصفحة المنبثقة */
+        .popup {
+            display: none; /* إخفاء الصفحة المنبثقة افتراضيا */
+            position: fixed; /* تحديد الوضع الثابت للصفحة المنبثقة */
+            z-index: 1; /* تحديد الطبقة الأمامية */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,1,0.5); /* لون خلفية الصفحة المنبثقة مع تعتيم */
+        }
+        
+        /* إعدادات محتوى الصفحة المنبثقة */
+        .popup-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+            height: 50vh;
+        }
+        
+        /* إعدادات زر إغلاق الصفحة المنبثقة */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    
+   
+    		body {background-image: url(/static/image.jpeg);
+    		    background-size: cover;
+    		
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: ;
+            padding: ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-image: url(/static/images.jpeg);
+    		background-size: cover;
+            padding: 8px;
+            border-radius: 30px;
+            box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+        form {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 8px;
+            
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"], select, input[type="date"],input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 5px 40px;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: green;
+            color: #333;
+        }
+       
+        
+        /* تكبير حجم الأيقونة */
+        .fab {
+            font-size: 40px; /* حجم الأيقونة بالبكسل */
+        }
+    </style>
+</head>
+
+              <!-- الصفحة المنبثقة -->
+              <center>
+              <div id="popup" class="popup">
+                  <div class="popup-content">
+                      <span class="close" id="closePopup">&times;</span>
+                      <center><br>
+                        <form action="/data" method="get">
+                          
+                        
+                        <br>
+                        <label>رقم الحجز اورانج</label>
+                        <input type="number" name="number" required placeholder="ادخل رقم الحجز"><br><br>
+                        <i>ادخل الكود تم نسخه هنا</i>
+                        <input type="text" name="code" required placeholder="ادخل الكود هنا"><br><br><br>
+                        <input type="submit" value="تحقق">
+                        </form><br><br><br>
+                        <form action="/control">
+                        <input type="submit" value="control" id="/control">
+                        </form>
+                        
+                        
+                      </center>
+                  </div>
+              </div>
+              </center>
+              <!-- زر فتح الصفحة المنبثقة -->
+
+              
+<body dir="rtl" align="center">
+
+    <div class="container">
+      <h3><font color="white">{{string}}</font></h3>
+    
+        
+        <form method="post">
+            <div class="form-group">
+                <label for="name"><font color="white">الاسم</font></label>
+                <input type="text" id="name" name="name" required placeholder="ادخل الاسم">
+            </div>
+            <div class="form-group">
+                <label for="number"><font color="white">رقم حجز الباقة</font></label>
+                <input type="number" id="number" name="number" required placeholder="رقم اورانج">
+            </div>
+            <div class="form-group">
+                <label for="number"><font color="white">رقم التواصل</font></label>
+                <input type="number" id="number" name="phone" required placeholder="واتس او فون">
+            </div>
+            <div class="form-group">
+                <label for="service"><font color="white">حجم الباقة</font></label>
+                <select name="backage" required>
+                    <option value="35 جيجا + 2000 دقيقة 190ج">35 جيجا + 2000 دقيقة 190ج</option>
+                    <option value="25 جيجا + 2500 دقيقة 160ج">25 جيجا + 2500 دقيقة 160ج</option>
+                    <option value="20 جيجا + 2000 دقيقة 140ج">20 جيجا + 2000 دقيقة 140ج</option>
+                    <option value="15 جيجا + 1500 دقيقة 110ج">15جيجا + 150 دقيقة 110ج</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date"><font color="white">التاريخ الحجز</font></label>
+                
+                <input type="date" id="date" name="data" required>
+            </div>
+            {{ form.hidden_tag() }}{{ form.recaptcha }}<br>
+              <input type="submit" id ="openPopup" value="بيانات الحجز">
+              
+              <input type="submit" value="حجز">
+        </form><br>
+         <!-- أيقونة الفيسبوك -->
+          <a href="https://www.facebook.com/sherif.omarmahmoud" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-facebook"></i>
+          </a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <!-- أيقونة الواتساب -->
+          <a href="https://chat.whatsapp.com/L07LjKoZ6bS5cTC02ug4Mo" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+              <br>
+              <h4 style="text-decoration: none;">شريف/ت/01019557203</h4><h4 style="text-decoration: none;">احمد/ت/01027179969</h4>
+    </div>
+    <script src="/static/js/script.js"></script>
+    
+
+</body>
+</html>
