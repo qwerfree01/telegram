@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+				<html lang="en">
+				<head>
+				    <meta charset="UTF-8">
+				    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+				    <title>orange backage</title>
+				    <link rel="stylesheet" href="/css/styles.css">
+				</head>
+				<body dir="rtl"><br>
+        		<center>
+        		{{number}}<br>
+        		<div>
+        		
+				  <table border="1" dir="rtl">
+				    <tr><th colspan="2">{{data[0]}}</th></r>
+				    <tr><td>رقم حجز الباقة</td><td>{{number}}</td></tr>
+				    <tr><td>حجم الباقة</td><td>{{data[2]}}</td></tr>
+				    <tr><td>التاريخ</td><td>{{data[3]}}</td></tr>
+				    <tr><td>رقم التواصل</td><td>{{data[1]}}</td></tr>
+				    <tr><td>code</td><td>{{data[4]}}</td></tr>
+				    
+				  </table>
+        		</div>
+        		
+        		<br><br>
+        		<form action="/delete" method="post">
+        		<h4>اضغط هنا للالغاء الحجز</h4>
+        		<br>
+        		<button type="submit" name="delete" value={{number}} name="name">الغاء الحجز</button>
+        		
+        		</form>
+        		<br><br>
+        		<form action="/">
+        		
+        		<input type="submit" id="/" value="اذهب الي الصفحة الرئيسية">
+        		</form>
+        		</center>
+        		</body>
+        		</html>
